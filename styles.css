@@ -1,0 +1,121 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+    padding: 10px 20px;
+    z-index: 999; /* Garante que o cabeçalho fique sempre acima */
+    transition: top 0.3s; /* Transição suave ao esconder/revelar */
+}
+
+header.hidden {
+    top: -100px; /* Esconde o cabeçalho ao rolar para baixo */
+}
+
+.header-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+#lang-switch {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999; /* Garante que o botão fique sempre acima */
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+.narrative {
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color 1s, color 1s;
+}
+
+#narrative-1 {
+    background-color: #000; /* Alterado para preto */
+    color: #fff;
+}
+
+#narrative-2 {
+    background-color: #333; /* Alterado para tom mais escuro */
+    color: #fff;
+}
+
+#narrative-3 {
+    background-color: #004d00;
+}
+
+.content {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text {
+    width: 100%;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.full-width-text {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 0.5em 0;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
